@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AboutMe } from "./component/AboutMe";
 import { Education } from "./component/Education";
 import { Experience } from "./component/Experience";
@@ -12,9 +12,13 @@ import { SplashScreen } from "./component/SplashScreen";
 function App() {
   const [isTimeOut, setIsTimeOut] = useState(false);
 
-  setTimeout(() => {
-    setIsTimeOut((prevState) => !prevState);
-  }, 2000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTimeOut(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
