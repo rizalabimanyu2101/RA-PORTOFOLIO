@@ -65,18 +65,27 @@ export const Header = () => {
       >
         <div
           onClick={handleClose}
-          className="max-[400px]:w-[30%] w-[35%] bg-[#1A1A1A]/50"
+          className="w-[35%] bg-[#1A1A1A]/50
+          max-[400px]:w-[30%]"
         ></div>
-        <div className="max-[400px]:w-[70%] w-[65%] bg-[#1A1A1A] border-s-2 border-white">
-          <ul className="flex flex-col text-white size-full p-10 text-2xl max-[400px]:text-lg md:text-4xl jura-regular max-[400px]:gap-8 gap-15 items-start font-bold">
+        <div
+          className="w-[65%] bg-[#1A1A1A] border-s-2 border-white
+        max-[400px]:w-[70%]"
+        >
+          <ul
+            className="flex flex-col text-white size-full p-10 text-2xl jura-regular gap-15 items-start font-bold
+          max-[400px]:text-lg md:text-4xl max-[400px]:gap-8"
+          >
             <div className="flex w-full items-center justify-between">
               <CgCloseR
-                className="opacity-0 max-[400px]:text-5xl text-6xl text-red-600"
+                className="opacity-0 text-6xl text-red-600
+                max-[400px]:text-5xl"
                 disabled
               />
               <CgCloseR
                 onClick={handleClose}
-                className="max-[400px]:text-5xl text-6xl text-red-600"
+                className="text-6xl text-red-600
+                max-[400px]:text-5xl"
               />
             </div>
             <button
@@ -136,9 +145,9 @@ export const Header = () => {
         className={`flex px-12 h-[120px] justify-between fixed w-full z-150 ${
           isActive ? "border-b-2 border-white" : ""
         }
-      md:px-20 py-5 md:py-5`}
+       md:px-20 py-5 md:py-5`}
         style={{
-          backgroundColor: `rgba(26, 26, 26, ${opacity})`, // Background berubah opacity
+          backgroundColor: `rgba(26, 26, 26, ${opacity})`,
         }}
       >
         <a href="/" className=" hover:animate-spin flex">
@@ -188,7 +197,8 @@ export const Header = () => {
         <GiHamburgerMenu
           onClick={handleClose}
           className=" block text-white size-12 my-auto
-      lg:hidden max-[400px]:size-9"
+        lg:hidden
+        max-[400px]:size-9"
         />
       </header>
     </>
