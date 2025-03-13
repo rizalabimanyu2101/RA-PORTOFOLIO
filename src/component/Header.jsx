@@ -1,17 +1,33 @@
 import { useState, useEffect } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { CgCloseR } from "react-icons/cg";
 
 export const Header = () => {
   const [opacity, setOpacity] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [isClose, setIsClose] = useState(false);
+
+  const handleClose = (e) => {
+    e.preventDefault();
+    setIsClose((prevState) => !prevState);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const targetSection = document.getElementById("myskill");
+      const sections = ["myskill", "education"]; // Tambahkan semua ID yang ingin diperiksa
+      let isSectionActive = false;
 
-      if (!targetSection) return;
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 120 && rect.bottom >= 120) {
+            isSectionActive = true;
+          }
+        }
+      });
 
-      const rect = targetSection.getBoundingClientRect();
-      setIsActive(rect.top <= 120 && rect.bottom >= 120); // 80px disesuaikan dengan tinggi header
+      setIsActive(isSectionActive);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,39 +57,140 @@ export const Header = () => {
   };
 
   return (
-    <header
-      className={`flex px-20 py-5 h-[120px] justify-between fixed w-full z-50 ${
-        isActive ? "border-b-2 border-white" : ""
-      }`}
-      style={{
-        backgroundColor: `rgba(26, 26, 26, ${opacity})`, // Background berubah opacity
-      }}
-    >
-      <a href="/" className=" hover:animate-spin">
-        <img src="logo.png" className=" size-20 cursor-pointer" />
-      </a>
-      <nav className="flex">
-        <ul className="text-white text-xl jura-regular flex gap-18 items-center font-bold">
-          <button
-            onClick={() => scrollToSection("aboutme")}
-            className="inline cursor-pointer"
-          >
-            ABOUT ME
-          </button>
-          <button
-            onClick={() => scrollToSection("myskill")}
-            className="inline cursor-pointer"
-          >
-            MY SKILL
-          </button>
-          <button
-            onClick={() => scrollToSection("project")}
-            className="inline cursor-pointer"
-          >
-            PROJECT
-          </button>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <div
+        className={`${
+          isClose ? "flex" : "hidden"
+        } fixed  size-full z-500 bg-amber-300/0`}
+      >
+        <div
+          onClick={handleClose}
+          className="max-[400px]:w-[30%] w-[35%] bg-[#1A1A1A]/50"
+        ></div>
+        <div className="max-[400px]:w-[70%] w-[65%] bg-[#1A1A1A] border-s-2 border-white">
+          <ul className="flex flex-col text-white size-full p-10 text-2xl max-[400px]:text-lg md:text-4xl jura-regular max-[400px]:gap-8 gap-15 items-start font-bold">
+            <div className="flex w-full items-center justify-between">
+              <CgCloseR
+                className="opacity-0 max-[400px]:text-5xl text-6xl text-red-600"
+                disabled
+              />
+              <CgCloseR
+                onClick={handleClose}
+                className="max-[400px]:text-5xl text-6xl text-red-600"
+              />
+            </div>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("aboutme");
+                handleClose(e);
+              }}
+              className="inline text-start cursor-pointer"
+            >
+              TENTANG AKU
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("education");
+                handleClose(e);
+              }}
+              className="inline text-start cursor-pointer"
+            >
+              PENDIDIKAN
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("experience");
+                handleClose(e);
+              }}
+              className="inline text-start cursor-pointer"
+            >
+              PENGALAMAN
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("myskill");
+                handleClose(e);
+              }}
+              className="inline text-start cursor-pointer"
+            >
+              KEMAMPUAN
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("project");
+                handleClose(e);
+              }}
+              className="inline text-start cursor-pointer"
+            >
+              PROYEK
+            </button>
+          </ul>
+        </div>
+      </div>
+      <header
+        className={`flex px-12 h-[120px] justify-between fixed w-full z-150 ${
+          isActive ? "border-b-2 border-white" : ""
+        }
+      md:px-20 py-5 md:py-5`}
+        style={{
+          backgroundColor: `rgba(26, 26, 26, ${opacity})`, // Background berubah opacity
+        }}
+      >
+        <a href="/" className=" hover:animate-spin flex">
+          <img
+            src="logo.png"
+            className=" size-15 cursor-pointer my-auto
+          md:size-20"
+          />
+        </a>
+        <nav
+          className="hidden 
+      lg:flex"
+        >
+          <ul className="text-white text-md jura-regular flex gap-12 items-center font-bold">
+            <button
+              onClick={() => scrollToSection("aboutme")}
+              className="inline cursor-pointer"
+            >
+              TENTANG AKU
+            </button>
+            <button
+              onClick={() => scrollToSection("education")}
+              className="inline cursor-pointer"
+            >
+              PENDIDIKAN
+            </button>
+            <button
+              onClick={() => scrollToSection("experience")}
+              className="inline cursor-pointer"
+            >
+              PENGALAMAN
+            </button>
+            <button
+              onClick={() => scrollToSection("myskill")}
+              className="inline cursor-pointer"
+            >
+              KEMAMPUAN
+            </button>
+            <button
+              onClick={() => scrollToSection("project")}
+              className="inline cursor-pointer"
+            >
+              PROYEK
+            </button>
+          </ul>
+        </nav>
+        <GiHamburgerMenu
+          onClick={handleClose}
+          className=" block text-white size-12 my-auto
+      lg:hidden max-[400px]:size-9"
+        />
+      </header>
+    </>
   );
 };
