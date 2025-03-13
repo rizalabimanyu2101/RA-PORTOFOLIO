@@ -7,13 +7,14 @@ export const Jumbotron = () => {
   return (
     <>
       <div
-        className="flex bg-cover px-12 py-20 pt-40 justify-between absolute w-full h-fit z-10 bg-[url(bg-jumbotron.jpg)]
+        className="flex bg-cover px-12 py-20 pt-40 justify-between absolute w-full h-fit z-10
         max-[400px]:text-sm 
         max-[400px]:pb-15
         max-[400px]:pt-32
         md:px-20
         lg:pt-48
         lg:h-screen"
+        style={{ backgroundImage: "url('/bg-jumbotron.jpg')" }}
       >
         <div
           className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
