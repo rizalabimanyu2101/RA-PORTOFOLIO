@@ -9,11 +9,11 @@ export const AboutMe = () => {
       id="aboutme"
     >
       <p
-        className=" text-5xl  jura-regular font-bold text-center text-[#14ADFF]
-      max-[320px]:text-3xl 
-      max-[400px]:text-4xl
-      lg:text-7xl
-      xl:text-8xl"
+        className=" text-4xl  jura-regular font-bold text-center text-[#14ADFF]
+      max-[320px]:text-2xl 
+      max-[400px]:text-3xl
+      lg:text-5xl
+      xl:text-6xl"
       >
         TENTANG AKU
       </p>
