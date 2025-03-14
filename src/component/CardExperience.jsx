@@ -6,7 +6,7 @@ export const CardExperience = ({ year, dataExperience }) => {
       <h1 className="text-center text-2xl p-1 font-mono border-b-2 border-[#1A1A1A]">
         {year}
       </h1>
-      <div className="flex flex-col max-[400px]:px-4 px-5 sm:px-7">
+      <div className="flex flex-col max-[430px]:px-4 px-5 sm:px-7">
         {dataExperience.map((a) => (
           <CardSubExperience
             key={`${a.placeExperience} - ${a.dateExperience}`}

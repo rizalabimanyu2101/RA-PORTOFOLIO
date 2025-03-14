@@ -21,7 +21,7 @@ export const CardSubExperience = ({
         className="flex flex-col w-full justify-center py-5 gap-3
       md:w-[46%] 
       max-[320px]:text-xs 
-      max-[400px]:text-sm"
+      max-[430px]:text-sm"
       >
         <p
           className="self-start text-start rounded bg-[#1A1A1A] text-white p-2 font-bold

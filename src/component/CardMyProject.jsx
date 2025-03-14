@@ -25,8 +25,8 @@ export const CardMyProject = ({
             </p>
             <p
               className=" font-bold text-md
-            max-[400px]:text-sm
-            max-[400px]:text-justify
+            max-[430px]:text-sm
+            max-[430px]:text-justify
             xl:text-xl"
             >
               {descProject}

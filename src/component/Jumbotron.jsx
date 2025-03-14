@@ -8,9 +8,9 @@ export const Jumbotron = () => {
     <>
       <div
         className="flex bg-cover px-12 py-20 pt-40 justify-between absolute w-full h-fit z-10
-        max-[400px]:text-sm 
-        max-[400px]:pb-15
-        max-[400px]:pt-32
+        max-[430px]:text-sm 
+        max-[430px]:pb-15
+        max-[430px]:pt-32
         md:px-20
         lg:pt-48
         lg:h-screen"
@@ -18,7 +18,7 @@ export const Jumbotron = () => {
       >
         <div
           className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
-        max-[400px]:gap-3.5 
+        max-[430px]:gap-3.5 
         md:gap-4
         md:w-[45%]
         lg:w-[55%]
@@ -29,7 +29,7 @@ export const Jumbotron = () => {
           <p
             className="text-5xl jura-regular font-bold
           max-[320px]:text-3xl 
-          max-[400px]:text-4xl
+          max-[430px]:text-4xl
           lg:text-7xl
           xl:text-8xl"
           >
@@ -37,7 +37,7 @@ export const Jumbotron = () => {
           </p>
           <p
             className=" text-xl jura-regular font-bold
-          max-[400px]:text-sm
+          max-[430px]:text-sm
           lg:text-4xl
           xl:text-5xl"
           >
@@ -52,9 +52,9 @@ export const Jumbotron = () => {
               download
               className="flex gap-3 bg-[#14ADFF] jura-regular font-bold p-2 w-[130px] rounded-lg cursor-pointer text-center
               max-[320px]:text-[10px]
-              max-[400px]:w-[100px]
+              max-[430px]:w-[100px]
               max-[320px]:w-[90px]
-              max-[400px]:text-sm
+              max-[430px]:text-sm
               lg:p-3
               lg:w-[150px]"
             >
@@ -71,7 +71,7 @@ export const Jumbotron = () => {
               className="flex gap-3 bg-[#14ADFF] jura-regular font-bold p-2 rounded-lg cursor-pointer text-center
               max-[320px]:text-[10px]
               max-[320px]:w-[90px]
-              max-[400px]:w-[100px]
+              max-[430px]:w-[100px]
               lg:p-3 w-[130px]
               lg:w-[150px]"
             >
@@ -87,7 +87,7 @@ export const Jumbotron = () => {
             className="flex flex-wrap gap-5 h-full
           md:flex-nowrap
           max-[320px]:gap-3
-          max-[400px]:pt-3"
+          max-[430px]:pt-3"
           >
             <a
               href="https://www.linkedin.com/in/rizalabimanyu202/"
@@ -95,7 +95,7 @@ export const Jumbotron = () => {
             >
               <FaLinkedinIn
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -105,14 +105,14 @@ export const Jumbotron = () => {
             >
               <FiGithub
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
             <a href="https://www.facebook.com/Arjunkoko.202/" alt="facebook">
               <FaFacebookF
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -122,14 +122,14 @@ export const Jumbotron = () => {
             >
               <FaInstagram
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
             <a href="mailto:plasticbomb202@gmail.com" alt="email">
               <MdOutlineEmail
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -154,16 +154,16 @@ export const Jumbotron = () => {
       </div>
       <div
         className="flex bg-cover px-12 py-20 pt-40 justify-between absolute w-full h-fit z-20 bg-[#1A1A1A]/25
-        max-[400px]:text-sm 
-        max-[400px]:pb-15
-        max-[400px]:pt-32
+        max-[430px]:text-sm 
+        max-[430px]:pb-15
+        max-[430px]:pt-32
         md:px-20
         lg:pt-48
         lg:h-screen"
       >
         <div
           className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
-        max-[400px]:gap-3.5 
+        max-[430px]:gap-3.5 
         md:gap-4
         md:w-[45%]
         lg:w-[55%]
@@ -174,7 +174,7 @@ export const Jumbotron = () => {
           <p
             className="text-5xl jura-regular font-bold
           max-[320px]:text-3xl 
-          max-[400px]:text-4xl
+          max-[430px]:text-4xl
           lg:text-7xl
           xl:text-8xl"
           >
@@ -182,7 +182,7 @@ export const Jumbotron = () => {
           </p>
           <p
             className=" text-xl jura-regular font-bold
-          max-[400px]:text-sm
+          max-[430px]:text-sm
           lg:text-4xl
           xl:text-5xl"
           >
@@ -197,9 +197,9 @@ export const Jumbotron = () => {
               download
               className="flex gap-3 bg-[#14ADFF] jura-regular font-bold p-2 w-[130px] rounded-lg cursor-pointer text-center
               max-[320px]:text-[10px]
-              max-[400px]:w-[100px]
+              max-[430px]:w-[100px]
               max-[320px]:w-[90px]
-              max-[400px]:text-sm
+              max-[430px]:text-sm
               lg:p-3
               lg:w-[150px]"
             >
@@ -216,7 +216,7 @@ export const Jumbotron = () => {
               className="flex gap-3 bg-[#14ADFF] jura-regular font-bold p-2 rounded-lg cursor-pointer text-center
               max-[320px]:text-[10px]
               max-[320px]:w-[90px]
-              max-[400px]:w-[100px]
+              max-[430px]:w-[100px]
               lg:p-3 w-[130px]
               lg:w-[150px]"
             >
@@ -232,7 +232,7 @@ export const Jumbotron = () => {
             className="flex flex-wrap gap-5 h-full
           md:flex-nowrap
           max-[320px]:gap-3
-          max-[400px]:pt-3"
+          max-[430px]:pt-3"
           >
             <a
               href="https://www.linkedin.com/in/rizalabimanyu202/"
@@ -240,7 +240,7 @@ export const Jumbotron = () => {
             >
               <FaLinkedinIn
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -250,14 +250,14 @@ export const Jumbotron = () => {
             >
               <FiGithub
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
             <a href="https://www.facebook.com/Arjunkoko.202/" alt="facebook">
               <FaFacebookF
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -267,14 +267,14 @@ export const Jumbotron = () => {
             >
               <FaInstagram
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
             <a href="mailto:plasticbomb202@gmail.com" alt="email">
               <MdOutlineEmail
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -299,16 +299,16 @@ export const Jumbotron = () => {
       </div>
       <div
         className="flex bg-cover px-12 py-20 pt-40 justify-between relative w-full h-fit z-30
-        max-[400px]:text-sm 
-        max-[400px]:pb-15
-        max-[400px]:pt-32
+        max-[430px]:text-sm 
+        max-[430px]:pb-15
+        max-[430px]:pt-32
         md:px-20
         lg:pt-48
         lg:h-screen"
       >
         <div
           className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
-        max-[400px]:gap-3.5
+        max-[430px]:gap-3.5
         md:gap-4
         md:w-[45%]
         lg:w-[55%]
@@ -319,7 +319,7 @@ export const Jumbotron = () => {
           <p
             className="text-5xl jura-regular font-bold
           max-[320px]:text-3xl 
-          max-[400px]:text-4xl
+          max-[430px]:text-4xl
           lg:text-7xl
           xl:text-8xl"
           >
@@ -327,7 +327,7 @@ export const Jumbotron = () => {
           </p>
           <p
             className=" text-xl jura-regular font-bold
-          max-[400px]:text-sm
+          max-[430px]:text-sm
           lg:text-4xl
           xl:text-5xl"
           >
@@ -342,9 +342,9 @@ export const Jumbotron = () => {
               download
               className="flex gap-3 bg-[#14ADFF] jura-regular font-bold p-2 w-[130px] rounded-lg cursor-pointer text-center
               max-[320px]:text-[10px]
-              max-[400px]:w-[100px]
+              max-[430px]:w-[100px]
               max-[320px]:w-[90px]
-              max-[400px]:text-sm
+              max-[430px]:text-sm
               lg:p-3
               lg:w-[150px]"
             >
@@ -361,7 +361,7 @@ export const Jumbotron = () => {
               className="flex gap-3 bg-[#14ADFF] jura-regular font-bold p-2 rounded-lg cursor-pointer text-center
               max-[320px]:text-[10px]
               max-[320px]:w-[90px]
-              max-[400px]:w-[100px]
+              max-[430px]:w-[100px]
               lg:p-3 w-[130px]
               lg:w-[150px]"
             >
@@ -377,7 +377,7 @@ export const Jumbotron = () => {
             className="flex flex-wrap gap-5 h-full
           md:flex-nowrap
           max-[320px]:gap-3
-          max-[400px]:pt-3"
+          max-[430px]:pt-3"
           >
             <a
               href="https://www.linkedin.com/in/rizalabimanyu202/"
@@ -385,7 +385,7 @@ export const Jumbotron = () => {
             >
               <FaLinkedinIn
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -395,14 +395,14 @@ export const Jumbotron = () => {
             >
               <FiGithub
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
             <a href="https://www.facebook.com/Arjunkoko.202/" alt="facebook">
               <FaFacebookF
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
@@ -412,14 +412,14 @@ export const Jumbotron = () => {
             >
               <FaInstagram
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>
             <a href="mailto:plasticbomb202@gmail.com" alt="email">
               <MdOutlineEmail
                 className="size-10 bg-white p-1 rounded-md text-[#1A1A1A]
-              max-[400px]:size-7
+              max-[430px]:size-7
               lg:size-12"
               />
             </a>

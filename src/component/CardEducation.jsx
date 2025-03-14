@@ -16,7 +16,7 @@ export const CardEducation = ({
         <p
           className="font-bold text-xl text-white
         max-[320px]:text-sm
-        max-[400px]:text-lg
+        max-[430px]:text-lg
         md:text-3xl"
         >
           {nameEducation}
@@ -25,7 +25,7 @@ export const CardEducation = ({
       <div
         className="flex flex-col font-bold gap-2
         max-[320px]:text-xs
-        max-[400px]:text-sm
+        max-[430px]:text-sm
         sm:gap-3 
         md:text-lg"
       >

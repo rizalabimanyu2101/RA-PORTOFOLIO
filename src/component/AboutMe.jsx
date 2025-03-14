@@ -2,16 +2,16 @@ export const AboutMe = () => {
   return (
     <div
       className="flex flex-col bg-white px-12 p-14 gap-14 
-      max-[400px]:px-8
-      max-[400px]:py-10
-      max-[400px]:gap-10
+      max-[430px]:px-8
+      max-[430px]:py-10
+      max-[430px]:gap-10
       md:px-20"
       id="aboutme"
     >
       <p
         className=" text-4xl  jura-regular font-bold text-center text-[#14ADFF]
       max-[320px]:text-2xl 
-      max-[400px]:text-3xl
+      max-[430px]:text-3xl
       lg:text-5xl
       xl:text-6xl"
       >
@@ -19,7 +19,7 @@ export const AboutMe = () => {
       </p>
       <div
         className="flex flex-col bg-cover gap-10 
-      max-[400px]:gap-6
+      max-[430px]:gap-6
       lg:flex-row
       lg:gap-5
       xl:gap-20"
@@ -32,7 +32,7 @@ export const AboutMe = () => {
           <img
             className="  size-70 rounded-full border-8 border-[#14ADFF] m-auto
             max-[320px]:size-40
-            max-[400px]:size-50
+            max-[430px]:size-50
             xl:size-80"
             src="profile-jumbotron-2.jpg"
           />
@@ -44,8 +44,8 @@ export const AboutMe = () => {
         >
           <p
             className=" text-xl/10 jura-regular font-bold text-[#1A1A1A]
-          max-[400px]:text-[13px]/6
-          max-[400px]:text-justify
+          max-[430px]:text-[13px]/6
+          max-[430px]:text-justify
           xl:text-2xl/12"
           >
             Saya adalah lulusan baru jurusan Teknik Informatika di Universitas

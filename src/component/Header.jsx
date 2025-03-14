@@ -66,26 +66,26 @@ export const Header = () => {
         <div
           onClick={handleClose}
           className="w-[35%] bg-[#1A1A1A]/50
-          max-[400px]:w-[30%]"
+          max-[430px]:w-[30%]"
         ></div>
         <div
           className="w-[65%] bg-[#1A1A1A] border-s-2 border-white
-        max-[400px]:w-[70%]"
+        max-[430px]:w-[70%]"
         >
           <ul
             className="flex flex-col text-white size-full p-10 text-2xl jura-regular gap-15 items-start font-bold
-          max-[400px]:text-lg md:text-4xl max-[400px]:gap-8"
+          max-[430px]:text-lg md:text-4xl max-[430px]:gap-8"
           >
             <div className="flex w-full items-center justify-between">
               <CgCloseR
                 className="opacity-0 text-6xl text-red-600
-                max-[400px]:text-5xl"
+                max-[430px]:text-5xl"
                 disabled
               />
               <CgCloseR
                 onClick={handleClose}
                 className="text-6xl text-red-600
-                max-[400px]:text-5xl"
+                max-[430px]:text-5xl"
               />
             </div>
             <button
@@ -198,7 +198,7 @@ export const Header = () => {
           onClick={handleClose}
           className=" block text-white size-12 my-auto
         lg:hidden
-        max-[400px]:size-9"
+        max-[430px]:size-9"
         />
       </header>
     </>
