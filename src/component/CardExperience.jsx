@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 export const CardExperience = ({ year, dataExperience }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (

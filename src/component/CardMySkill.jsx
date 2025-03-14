@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 export const CardMySkill = ({ imgLogoMySkill, textMySkill }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (
