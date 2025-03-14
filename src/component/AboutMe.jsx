@@ -1,64 +1,86 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export const AboutMe = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.05,
+  });
+
   return (
-    <div
-      className="flex flex-col bg-white px-12 p-14 gap-14 
+    <div className="bg-white" id="aboutme">
+      <motion.div
+        className="flex flex-col px-12 p-14 gap-14 
       max-[430px]:px-8
       max-[430px]:py-10
       max-[430px]:gap-10
       md:px-20"
-      id="aboutme"
-    >
-      <p
-        className=" text-4xl  jura-regular font-bold text-center text-[#14ADFF]
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <p
+          className=" text-4xl  jura-regular font-bold text-center text-[#14ADFF]
       max-[320px]:text-2xl 
       max-[430px]:text-3xl
       lg:text-5xl
       xl:text-6xl"
-      >
-        TENTANG AKU
-      </p>
-      <div
-        className="flex flex-col bg-cover gap-10 
+        >
+          TENTANG AKU
+        </p>
+        <div
+          className="flex flex-col bg-cover gap-10 
       max-[430px]:gap-6
       lg:flex-row
       lg:gap-5
       xl:gap-20"
-      >
-        <div
-          className="flex bg-green-300/0 w-[100%]
+        >
+          <motion.div
+            className="flex bg-green-300/0 w-[100%]
         lg:w-[40%]
         xl:w-[30%]"
-        >
-          <img
-            className="  size-70 rounded-full border-8 border-[#14ADFF] m-auto
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <img
+              className="  size-70 rounded-full border-8 border-[#14ADFF] m-auto
             max-[320px]:size-40
             max-[430px]:size-50
             xl:size-80"
-            src="profile-jumbotron-2.jpg"
-          />
-        </div>
-        <div
-          className="bg-blue-300/0 w-[100%] flex m-auto
+              src="profile-jumbotron-2.jpg"
+            />
+          </motion.div>
+          <motion.div
+            className="bg-blue-300/0 w-[100%] flex m-auto
         lg:w-[60%]
         xl:w-[70%]"
-        >
-          <p
-            className=" text-xl/10 jura-regular font-bold text-[#1A1A1A]
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <p
+              className=" text-xl/10 jura-regular font-bold text-[#1A1A1A]
           max-[430px]:text-[13px]/6
           max-[430px]:text-justify
           xl:text-2xl/12"
-          >
-            Saya adalah lulusan baru jurusan Teknik Informatika di Universitas
-            YARSI. Saya fokus pada Front-End Development terutama pada Platform
-            Web. Saya sering berlatih dan membuat proyek menggunakan MERN
-            (MongoDB, Express.js, React.js, Node.js) dan tampilannya dibantu
-            oleh Tailwind CSS. Saya memiliki keinginan yang kuat untuk
-            mempelajari apa saja seperti Framework dan Library tentang Software
-            Engineering, asalkan saya dapat memenuhi kebutuhan perusahaan dan
-            kinerja aplikasi dapat berjalan sesuai keinginan perusahaan.
-          </p>
+            >
+              Saya adalah lulusan baru jurusan Teknik Informatika di Universitas
+              YARSI. Saya fokus pada Front-End Development terutama pada
+              Platform Web. Saya sering berlatih dan membuat proyek menggunakan
+              MERN (MongoDB, Express.js, React.js, Node.js) dan tampilannya
+              dibantu oleh Tailwind CSS. Saya memiliki keinginan yang kuat untuk
+              mempelajari apa saja seperti Framework dan Library tentang
+              Software Engineering, asalkan saya dapat memenuhi kebutuhan
+              perusahaan dan kinerja aplikasi dapat berjalan sesuai keinginan
+              perusahaan.
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

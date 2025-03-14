@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 export const CardMyProject = ({
   imgProject,
   toApp,
@@ -5,8 +8,21 @@ export const CardMyProject = ({
   descProject,
   techData,
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
-    <a href={toApp} className=" cursor-pointer" target="_blank">
+    <motion.a
+      href={toApp}
+      className=" cursor-pointer"
+      target="_blank"
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div
         className="flex flex-col h-full border-2 border-[#1A1A1A] rounded-xl p-6 gap-4
       max-[350px]:p-4"
@@ -42,6 +58,6 @@ export const CardMyProject = ({
           </div>
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 };

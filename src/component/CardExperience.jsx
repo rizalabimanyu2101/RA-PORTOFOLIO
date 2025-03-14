@@ -1,8 +1,21 @@
 import { CardSubExperience } from "./CardSubExperience";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const CardExperience = ({ year, dataExperience }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
-    <div className="flex flex-col border-2 border-[#1A1A1A] rounded-xl jura-regular">
+    <motion.div
+      className="flex flex-col border-2 border-[#1A1A1A] rounded-xl jura-regular"
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <h1 className="text-center text-2xl p-1 font-mono border-b-2 border-[#1A1A1A]">
         {year}
       </h1>
@@ -16,6 +29,6 @@ export const CardExperience = ({ year, dataExperience }) => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

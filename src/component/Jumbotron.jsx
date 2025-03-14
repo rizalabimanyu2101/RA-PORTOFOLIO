@@ -2,8 +2,15 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoMdDownload } from "react-icons/io";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const Jumbotron = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
   return (
     <>
       <div
@@ -17,7 +24,7 @@ export const Jumbotron = () => {
         style={{ backgroundImage: "url('/bg-jumbotron.jpg')" }}
       >
         <div
-          className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
+          className="opacity-0 bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
         max-[430px]:gap-3.5 
         md:gap-4
         md:w-[45%]
@@ -136,7 +143,7 @@ export const Jumbotron = () => {
           </div>
         </div>
         <div
-          className="bg-blue-300/0 hidden 
+          className="opacity-0 bg-blue-300/0 hidden 
         md:flex 
         md:w-[55%] 
         md:justify-end 
@@ -162,7 +169,7 @@ export const Jumbotron = () => {
         lg:h-screen"
       >
         <div
-          className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
+          className="opacity-0 bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
         max-[430px]:gap-3.5 
         md:gap-4
         md:w-[45%]
@@ -281,7 +288,7 @@ export const Jumbotron = () => {
           </div>
         </div>
         <div
-          className="bg-blue-300/0 hidden 
+          className="opacity-0 bg-blue-300/0 hidden 
         md:flex 
         md:w-[55%] 
         md:justify-end 
@@ -297,7 +304,7 @@ export const Jumbotron = () => {
           />
         </div>
       </div>
-      <div
+      <motion.div
         className="flex bg-cover px-12 py-20 pt-40 justify-between relative w-full h-fit z-30
         max-[430px]:text-sm 
         max-[430px]:pb-15
@@ -305,6 +312,10 @@ export const Jumbotron = () => {
         md:px-20
         lg:pt-48
         lg:h-screen"
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div
           className="bg-green-300/0 w-[100%] flex flex-col gap-5 text-white h-full
@@ -441,7 +452,7 @@ export const Jumbotron = () => {
             src="profile-jumbotron-1.jpg"
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
